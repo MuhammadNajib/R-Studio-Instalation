@@ -1,0 +1,6 @@
+Step 1 >>
+Instalasi untuk penambahan repository eksternal dari CRAN :
+  CRAN >> "Untuk mengelola repository mereka sendiri, dan pastikan repository tersebut trusted" 
+  
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+/home/lenovo/Pictures/Screenshot from 2017-09-14 08-42-49.png
