@@ -2,52 +2,52 @@ Step 1 >>
 Instalasi untuk penambahan repository eksternal dari CRAN :
   CRAN >> "Untuk mengelola repository mereka sendiri, dan pastikan repository tersebut trusted" 
   
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+>>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 Output :
-root@lenovo-ThinkPad-T420:/home/lenovo# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-Executing: /tmp/tmp.Irg0PXuvs4/gpg.1.sh --keyserver
-keyserver.ubuntu.com
---recv-keys
-E298A3A825C0D65DFD57CBB651716619E084DAB9
-gpg: requesting key E084DAB9 from hkp server keyserver.ubuntu.com
-gpg: key E084DAB9: public key "Michael Rutter <marutter@gmail.com>" imported
-gpg: Total number processed: 1
-gpg:               imported: 1  (RSA: 1)
+  root@lenovo-ThinkPad-T420:/home/lenovo# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+  Executing: /tmp/tmp.Irg0PXuvs4/gpg.1.sh --keyserver
+  keyserver.ubuntu.com
+  --recv-keys
+  E298A3A825C0D65DFD57CBB651716619E084DAB9
+  gpg: requesting key E084DAB9 from hkp server keyserver.ubuntu.com
+  gpg: key E084DAB9: public key "Michael Rutter <marutter@gmail.com>" imported
+  gpg: Total number processed: 1
+  gpg:               imported: 1  (RSA: 1)
 
 Setelah selesai menambahkan trusted key, kemudian tambah kan repository:
 root@lenovo-ThinkPad-T420:/home/lenovo# sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'
 
 kemudian Update, dengan perintah :
-sudo apt-get update
+>>sudo apt-get update
 output :
-...
-Get:1 https://cran.rstudio.com/bin/linux/ubuntu xenial/ InRelease [3.590 B]
-Get:2 https://cran.rstudio.com/bin/linux/ubuntu xenial/ Packages [37,8 kB]
-...
+    ...
+    Get:1 https://cran.rstudio.com/bin/linux/ubuntu xenial/ InRelease [3.590 B]
+    Get:2 https://cran.rstudio.com/bin/linux/ubuntu xenial/ Packages [37,8 kB]
+    ...
 
 Ketika  meng-update repositori  dan terdapat output seperti diatas, itu menandakan bahwa  telah berhasil menambahkan repository dari CRAN dan R siap untuk diinstalasi pada komputer. berikut perintah instalasi pada R
-root@lenovo-ThinkPad-T420:/home/lenovo# sudo apt-get install r-base
+>>root@lenovo-ThinkPad-T420:/home/lenovo# sudo apt-get install r-base
 outpur :
-...
-The following packages were automatically installed and are no longer required:
-  libllvm3.8 libmircommon5 linux-headers-4.4.0-31
-  linux-headers-4.4.0-31-generic linux-headers-4.4.0-64
-  linux-headers-4.4.0-64-generic linux-image-4.4.0-31-generic
-  linux-image-4.4.0-64-generic linux-image-extra-4.4.0-31-generic
-  linux-image-extra-4.4.0-64-generic snap-confine
-Use 'sudo apt autoremove' to remove them.
-The following additional packages will be installed:
-  bzip2-doc cdbs debhelper dh-strip-nondeterminism dh-translations gfortran
-  gfortran-5 intltool libblas-dev libbz2-dev libfile-stripnondeterminism-perl
-  libgfortran-5-dev libjpeg-dev libjpeg-turbo8-dev libjpeg8-dev liblapack-dev
-  liblzma-dev libmail-sendmail-perl libncurses5-dev libpcre3-dev libpcre32-3
-  libpcrecpp0v5 libpng12-dev libreadline-dev libreadline6-dev
-  libsys-hostname-long-perl libtinfo-dev po-debconf python-scour r-base-core
-  r-base-dev r-base-html r-cran-boot r-cran-class r-cran-cluster
-  r-cran-codetools r-cran-foreign r-cran-kernsmooth r-cran-lattice r-cran-mass
-  r-cran-matrix r-cran-mgcv r-cran-nlme r-cran-nnet r-cran-rpart
-  r-cran-spatial r-cran-survival r-doc-html r-recommended
-Suggested packages:
-...
+    ...
+    The following packages were automatically installed and are no longer required:
+      libllvm3.8 libmircommon5 linux-headers-4.4.0-31
+      linux-headers-4.4.0-31-generic linux-headers-4.4.0-64
+      linux-headers-4.4.0-64-generic linux-image-4.4.0-31-generic
+      linux-image-4.4.0-64-generic linux-image-extra-4.4.0-31-generic
+      linux-image-extra-4.4.0-64-generic snap-confine
+    Use 'sudo apt autoremove' to remove them.
+    The following additional packages will be installed:
+      bzip2-doc cdbs debhelper dh-strip-nondeterminism dh-translations gfortran
+      gfortran-5 intltool libblas-dev libbz2-dev libfile-stripnondeterminism-perl
+      libgfortran-5-dev libjpeg-dev libjpeg-turbo8-dev libjpeg8-dev liblapack-dev
+      liblzma-dev libmail-sendmail-perl libncurses5-dev libpcre3-dev libpcre32-3
+      libpcrecpp0v5 libpng12-dev libreadline-dev libreadline6-dev
+      libsys-hostname-long-perl libtinfo-dev po-debconf python-scour r-base-core
+      r-base-dev r-base-html r-cran-boot r-cran-class r-cran-cluster
+      r-cran-codetools r-cran-foreign r-cran-kernsmooth r-cran-lattice r-cran-mass
+      r-cran-matrix r-cran-mgcv r-cran-nlme r-cran-nnet r-cran-rpart
+      r-cran-spatial r-cran-survival r-doc-html r-recommended
+    Suggested packages:
+    ...
 
 Done!
